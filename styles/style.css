@@ -1,6 +1,7 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, 
+чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
@@ -11,6 +12,145 @@
 */
 
 .page {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-family-main), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-main);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+  border: 2px solid #000;
+  width: var(--block-width);
+  background-color: var(--bg-color);
+  margin-block: 100px;
+  padding-top: clamp(7.625rem, 0.5vw + 7.525rem, 8.125rem);
+  padding-bottom: clamp(7.625rem, 0.5vw + 7.525rem, 8.125rem);
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 1vw + 2.8625rem, 4.0625rem);
+
+}
+
+.header__content {
+  font-size: clamp(0.875rem, 0.5625vw + 0.7625rem, 1.4375rem);
+}
+
+.section-content {
+  display: grid;
+  gap: 52px;
+  justify-items: center;
+}
+
+/* card styles */
+
+.card {
+  width: var(--block-width);
+  border: 2px solid #000;
+  background-color: var(--bg-color);
+}
+
+.card__title {
+  font-size: var(--font-size-main-text);
+  font-variation-settings: "wght" var(--font-weight-accent); 
+  margin: 4px 10px;
+}
+
+.card__content {
+  font-size: var(--font-size-main-text);
+}
+
+.card__image-conteiner {
+  position: relative;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-label-text);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow:
+  -1px 0 #fff, 
+  0 1px #fff, 
+  1px 0 #fff, 
+  0 -1px #fff;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__label {
+        -webkit-text-stroke: 1px #fff;
+        text-shadow: none;
+    }
+}
+
+.card__image {
+  inline-size: 100%;
+  block-size: 100%;;
+}
+
+.card__description {
+  display: grid;
+  gap: 25px;
+  padding: 25px;
+}
+
+/* card button styles */
+
+.card__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-block-start: 25px;
+  margin-inline-end: 25px;
+  margin-block-end: 25px;
+}
+
+.button {
+  background: var(--bg-color);
+  border: none;
+}
+
+.card__button-like {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-label-text);
+  width: 130px;
+  border: 2px solid #000;
+}
+
+/* section button-save */
+
+.section__button-save {
+  margin-block-start: 50px;
+  margin-block-end: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.button__text {
+  font-family: var(--font-family-accent);
+}
+
+.button__save {
+  display: grid;
+  justify-items: center;
+  outline: 2px solid #000;
+  padding: 17px 20px;
+}
+
+.save__icon-floopy {
+  width: 2rem;
 }
