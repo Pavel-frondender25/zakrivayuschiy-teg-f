@@ -14,5 +14,7 @@
     --block-width: clamp(23.438rem, 100% , 43.75rem);
     --bg-color: #fff;
     --main-color: #000;
-    --hover-heart-color: #F00;
+    --animation-fill-color: #F00;
+    --contour-fill-color: #000;
+    --core-fill-color: #fff;
   }
