@@ -160,7 +160,6 @@
   position: relative;
   overflow: hidden;
   background: var(--bg-color);
-  border: none;
   transition: box-shadow 0.3s ease;
 }
 
@@ -204,7 +203,7 @@
 .card__like-button {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-label-text);
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   width: 130px;
 }
 
@@ -343,7 +342,6 @@
 /* desktop */
 
 @media (width >= 1024px) {
-
   .save__icon-floppy {
     width: 21px;
     height: 21px;
@@ -362,5 +360,4 @@
   .dialog__window-button {
     width: 18.3125rem;
   }
-
 }
