@@ -104,7 +104,7 @@
   border-bottom: 2px solid #000;
   inline-size: 100%;
   block-size: 100%;
-  background-size: contain;
+  object-fit: cover;
 }
 
 .card__description {
@@ -307,6 +307,9 @@
 /* dialog window */
 
 .dialog__window[open] {
+  width: 100%; /* задана ширина окна в 100% и max-width по макету*/
+  max-width: 341px;
+  border: 2px solid var(--main-color); /* определена граница по макету*/
   display: flex;
   gap: 30px;
   flex-direction: column;
@@ -320,7 +323,7 @@
 
 .dialog__window-open {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 39px 1fr; /* скоректировано  */
   gap: 20px;
   justify-items: center;
   align-items: center;
@@ -331,7 +334,7 @@
 .dialog__window-button {
   border: 2px solid #000;
   height: 38px;
-  width: 16.3125rem;
+  width: 100%;
 }
 
 .save__icon-floppy-big {
@@ -341,7 +344,7 @@
 
 /* desktop */
 
-@media (width >= 1024px) {
+@media (width >= 1440px) {
   .save__icon-floppy {
     width: 21px;
     height: 21px;
@@ -353,11 +356,7 @@
   }
 
   .dialog__window[open] {
-    inline-size: 353px;
+    max-width: 353px;
     padding: 30px;
-  }
-
-  .dialog__window-button {
-    width: 18.3125rem;
   }
 }
